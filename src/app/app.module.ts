@@ -22,6 +22,7 @@ import {FormsModule} from "@angular/forms";
     InfoUserComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,

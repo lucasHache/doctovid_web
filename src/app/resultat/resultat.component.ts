@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
+import {ResultatService} from "./resultat.service";
 
 @Component({
   selector: 'app-resultat',
@@ -7,7 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResultatComponent implements OnInit {
 
-  constructor() { }
+  constructor(private resultatService: ResultatService, private route: ActivatedRoute) {
+    // this.route.params.subscribe(parameters => {
+    //   if parameters
+    //   this.resultatService.findPraticienByNom(parameters.)
+    // }
+  }
 
   ngOnInit(): void {
   }

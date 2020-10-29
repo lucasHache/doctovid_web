@@ -24,7 +24,7 @@ export class PatientComponent implements OnInit {
   }
 
   chargeRdvsPasses(idPatient: number) {
-    this.patientService.findAllByPatientAndPasses(idPatient).subscribe(resp => this.rdvsPasses = resp, error => console.log(error));
+    this.patientService.findAllByPatientAndPasses(idPatient).subscribe(resp => {this.rdvsPasses = resp; console.log(this.rdvsPasses)}, error => console.log(error));
   }
 
   chargeRdvsFuturs(idPatient: number) {

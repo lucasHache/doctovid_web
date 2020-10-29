@@ -1,1 +1,57 @@
-<p>patient works!</p>
+
+<div class="row">
+
+  <div class="card col shadow my-4 ml-5 mr-4">
+    <p><h4>Rendez vous passés : </h4>
+    <table class="my-auto table">
+      <thead class="thead-dark">
+      <tr>
+        <th style="width: 20%">Nom patient</th>
+        <th style="width: 20%">Nom praticien</th>
+        <th style="width: 20%">Motif</th>
+        <th style="width: 20%">Lieu</th>
+        <th style="width: 20%">Ville</th>
+      </tr>
+      </thead>
+    </table>
+    <div class="scrollTableEmploye">
+      <table class="table table-striped">
+        <tbody>
+        <tr *ngFor="let rdv of rdvsPasses">
+          <td style="width: 20%">{{rdv.patient.nom}}</td>
+          <td style="width: 20%">{{rdv.praticien.nom}}</td>
+          <td style="width: 20%">{{rdv.motif?.type}}</td>
+          <td style="width: 20%">{{rdv.motif?.lieuConsult?.nom}}</td>
+          <td style="width: 20%">{{rdv.motif?.lieuConsult?.adresse.ville}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+</div>
+
+  <div class="card col shadow my-4 ml-5 mr-4">
+    <p><h4>Rendez vous à venir : </h4>
+    <table class="my-auto table">
+      <thead class="thead-dark">
+      <tr>
+        <th style="width: 20%">Nom patient</th>
+        <th style="width: 20%">Nom praticien</th>
+        <th style="width: 20%">Motif</th>
+        <th style="width: 20%">Lieu</th>
+        <th style="width: 20%">Ville</th>
+      </tr>
+      </thead>
+    </table>
+    <div class="scrollTableEmploye">
+      <table class="table table-striped">
+        <tbody>
+        <tr *ngFor="let rdv of rdvsFuturs; let i = index">
+          <td style="width: 27.5%">{{rdv.patient.nom}}</td>
+          <td style="width: 27.5%">{{rdv.praticien.nom}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>

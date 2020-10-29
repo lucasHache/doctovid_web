@@ -8,6 +8,7 @@ import {InfoUserComponent} from './info-user/info-user.component';
 
 const routes: Routes = [
   {path: '', component: AccueilComponent},
+  {path: 'patient/:id', component: PatientComponent},
   {path: 'patient', component: PatientComponent},
   {path: 'praticien', component: PraticienComponent},
   {path: 'resultat', component: ResultatComponent},
